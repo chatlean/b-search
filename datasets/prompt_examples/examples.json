@@ -1,0 +1,5 @@
+{"statement": "f : \u211d \u2192 \u211d,\nh\u2080 : \u2200 (x : \u211d), x > 0 \u2192 \u2200 (y : \u211d), y > 0 \u2192 f (x * y) = f x / y,\nh\u2081 : f 500 = 3\n\u22a2 f 600 = 5 / 2", "tactic": "specialize h\u2080 500 _ (6/5) _"}
+{"statement": "e : empty \u2192 fin 1 \u2192 \u2115 := \u03bb (_x : empty), 1\n\u22a2 9999.lcm 100001 = 90900909", "tactic": "have : fintype.card (fin 1) = 1 := fintype.card_fin 1"}
+{"statement": "\u03c3 : \u211d \u2243 \u211d,\nh : \u2200 (x : \u211d), \u21d1\u03c3 x = x ^ 3 - 8\n\u22a2 \u21d1\u03c3 (\u21d1(\u03c3.symm) 19) = \u21d1\u03c3 3", "tactic": "simp [h, \u03c3.apply_symm_apply]"}
+{"statement": "a b c : \u2102,\nh\u2080 : a + b = 2 * c,\nh\u2081 : c = complex.I\n\u22a2 a * c + b * c = -2", "tactic": "rw [\u2190 add_mul, h\u2080, h\u2081, mul_assoc, complex.I_mul_I]"}
+{"statement": "\u22a2 \u2200 (x : \u211d), \u00acx = 1 \u2192 \u00acx = -2 \u2192 (x + 1) / (x - 1) = (x - 2) / (x + 2) \u2192 x = 0", "tactic": "intros a ha"}
